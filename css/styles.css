@@ -1,0 +1,67 @@
+* {
+    font-family: 'Helvetica', sans-serif;
+}
+
+header {
+    background-color: rgb(39, 39, 39);
+    padding: 2rem 0 0.5rem 0;
+}
+
+header a {
+    color: rgb(212, 212, 212);
+
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title > a {
+    text-decoration: none;
+    display: flex;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#menu > a {
+    text-decoration: none;
+}
+
+main {
+    padding: 1.5rem;
+    background-color: #96b6c4;
+
+}
+
+main > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#map {
+    margin-top: 1rem;
+    border: 6px solid #406778;
+    border-radius: 16px;
+    width: 80%;
+    max-width: 555px;
+}
+
+#settings-ctnr,
+#settings-region,
+#settings-weather {
+    display: flex;
+}
+
+#settings-ctnr {
+    flex-direction: row;
+    gap: 6rem;
+}
