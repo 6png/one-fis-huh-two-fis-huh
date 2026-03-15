@@ -1,67 +1,103 @@
+:root {
+    --dkblu: #29424c;
+    --mdblu: #406778;
+    --ltblu: #96b6c4;
+    --txt: #dedede;
+}
+
+@font-face {
+    font-family: 'seurat';
+    src: url('/assets/fonts/FOT-Seurat Pro B.otf') format('opentype');
+}
+
 * {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'seurat', sans-serif;
 }
 
-header {
-    background-color: rgb(39, 39, 39);
-    padding: 2rem 0 0.5rem 0;
+
+@media (max-width: 600px) {
+  .control-window {
+    left: 0;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+  }
 }
 
-header a {
-    color: rgb(212, 212, 212);
-
+html {
+    background-color: var(--ltblu);
 }
 
-#title {
+.control-window {
+    position: fixed;
+    bottom: 60px;
+    left: 20px;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.517);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    z-index: 100;
+    padding: 9px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-#title > a {
-    text-decoration: none;
+.control-window h4 {
+    color: var(--txt);
+    margin-left: 4px;
+}
+
+.map-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.map-container img {
+    display: block;
+    pointer-events: none;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+.control-window-top {
     display: flex;
+    justify-content: space-between;
 }
 
-#menu {
+.radio-group button {
+    font-size: 0.7rem;
+}
+
+.check-group {
+    height: 66px;
+}
+
+.check-group button,
+.check-group button img {
+    height: 100%; 
+    width: auto;
+}
+
+.tab-bar {
+    height: 44px;
+    position: absolute;
+    top: 100%;         /* Pushes the bar exactly below the bottom edge */
+    left: 0;
+    right: 0;
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-around;
+    background: transparent;
+    border-radius: 0 0 15px 15px;
 }
 
-#menu > a {
-    text-decoration: none;
+.tab-bar button,
+.tab-bar button img {
+    height: 100%;
+    width: auto;
 }
 
-main {
-    padding: 1.5rem;
-    background-color: #96b6c4;
-
-}
-
-main > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#map {
-    margin-top: 1rem;
-    border: 6px solid #406778;
-    border-radius: 16px;
-    width: 80%;
-    max-width: 555px;
-}
-
-#settings-ctnr,
-#settings-region,
-#settings-weather {
-    display: flex;
-}
-
-#settings-ctnr {
-    flex-direction: row;
-    gap: 6rem;
+a, button, 
+.tab-link, .map-icon, 
+button img {
+    cursor: url('/assets/ptr.png'), pointer !important;
 }

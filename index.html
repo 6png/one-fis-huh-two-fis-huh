@@ -3,45 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>h</title>
+    <title>heart</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1 id="title"><a href="/">guide to hobbies</a></h1>
-        <nav id="menu">
-            <a href="/fishing">fishing</a>
-            <a href="/birdwatching">birdwatching</a>
-            <a href="/insect-catching">insect catching</a>
-        </nav>
-    </header>
-    <main>
-        <div id="settings-ctnr">
-            <div id="settings-region">
-                <time></time>
-                <div>
-                    <button>
-                        <label>GLOB</label>
-                    </button>
-                    <button>
-                        <label>AMER</label>
-                    </button>
-                    <button>
-                        <label>SEA</label>
-                    </button>
-                </div>
+    <div class="map-viewport">
+        <div class="map-container">
+            <img src="assets/map.png">
+            <div class="map-icon fish" style="top: 20%; left: 40%;"></div>
+        </div>
+    </div>
+    <aside class="control-window" id="ui-window">
+        <div class="control-window-top">
+            <div>
+                <h4>settings</h4>
             </div>
-            <div id="settings-weather">
-                <button>
-                    <img src="">
+            <button class="hide-btn" onclick="toggleWindow()">×</button>
+        </div>
+        
+        <div class="tab-content" id="tab-data">
+            <div class="filter-group">
+            <div class="radio-group">
+                <button class="time-btn active">00 - 06</button>
+                <button class="time-btn">06 - 12</button>
+                <button class="time-btn">12 - 18</button>
+                <button class="time-btn">18 - 24</button>
+            </div>
+            </div>
+            <div class="filter-group">
+            <div class="check-group">
+                <button class="weather-btn">
+                    <img src="assets/icons/sunny.png">
+                </button>
+                <button class="weather-btn">
+                    <img src="assets/icons/rainy.png">
+                </button>
+                <button class="weather-btn">
+                    <img src="assets/icons/rainbow2.png">
                 </button>
             </div>
+            </div>
         </div>
-        <div id="map-ctnr">
-            <img id="map" src="assets/map.png">
-        </div>
-    </main>
+
+        <nav class="tab-bar">
+            <button class="tab-link active">
+                <img src="assets/icons/fishing-better.png">
+            </button>
+            <button class="tab-link">
+                <img src="assets/icons/insect-catching-better.png">
+            </button>
+            <button class="tab-link">
+                <img src="assets/icons/birdwatching-better.png">
+            </button>
+        </nav>
+    </aside>
+    
     <footer>
 
     </footer>
