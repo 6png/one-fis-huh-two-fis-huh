@@ -27,6 +27,16 @@ def build_all():
                 "location": row[7]
             }
 
+            #unique cols
+            if category == "fish":
+                PASS # type: ignore
+            elif category == "bug":
+                PASS # type: ignore
+            elif category == "bird":
+                PASS # type: ignore
+
+            data.append(item)
+
 
         os.makedirs("./assets/data", exist_ok=True)
         with open(f"./assets/data/{category}.json", 'w', encoding='utf-8') as f:
