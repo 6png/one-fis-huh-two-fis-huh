@@ -5,8 +5,8 @@
     --uhh: #4eb8c9;
     --uhh2: #3b8da1;
     --txt: #564117;
-    --txtbg: #f0e2cf;
-    --txtbg2: #d9c8b0;
+    --txtbg: #fdf8f0;
+    --txtbg2: #e8dcc4;
 }
 
 @font-face {
@@ -151,41 +151,6 @@ html, body {
     padding: 8px;
 }
 
-/*
-
-.weather-btn:hover {
-    background-color: var(--txtbg);
-    background-image: repeating-linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.03),
-        rgba(0, 0, 0, 0.03) 10px,
-        transparent 10px,
-        transparent 20px
-    );
-}
-
-.weather-btn.active {
-    background-image: none;
-    background-color: var(--txtbg2);
-    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.1);
-    transform: translateY(2px);
-}
-
-
-.weather-btn img {
-    max-height: 100%;
-    width: auto;
-    filter: brightness(0.4) sepia(1) hue-rotate(15deg) saturate(1.5);
-    opacity: 0.8; /* Keeps them from looking too "heavy" when inactive 
-}
-
-.weather-btn.active img {
-    filter: brightness(0.3) sepia(1) hue-rotate(15deg) saturate(2);
-    opacity: 1;
-}
-
-*/
-
 .weather-btn {
     background-color: #f8d020; /* Classic ACNH Yellow */
     border: 3px solid #d8a010;  /* Darker Golden border */
@@ -245,14 +210,6 @@ html, body {
     border-radius: 20px;
     color: white;
     padding: 6px 12px;
-    
-    /*
-    background-color: #7c5e25;
-    color: white;
-    border: 0px;
-    padding: 6px 12px;
-    */
-
     font-weight: bold;
     font-size: 0.8rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -301,6 +258,7 @@ html, body {
     justify-content: center;
     align-items: center;
     box-shadow: inset 0px 5px 9px var(--txtbg2);
+    transition: all 0.1s ease;
 }
 
 .tab-bar button:hover {
