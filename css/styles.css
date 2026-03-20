@@ -78,6 +78,7 @@ html, body {
     transform: scale(1) translateY(50px); /* Slides down and shrinks */
     opacity: 1;
     pointer-events: auto;
+    border: 4px solid var(--txt);
 }
 
 .control-window.minimized .tab-content,
@@ -132,12 +133,10 @@ html, body {
     display: flex;
     gap: 12px;
     height: 52px;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0 15px;
     margin-bottom: 12px;
 }
-
-
 
 .weather-btn {
     height: 100%;
@@ -247,7 +246,7 @@ html, body {
     gap: 2px;
 }
 
-.tab-bar button {
+.tab-link {
     background-color: var(--txtbg2);
     border: 4px solid var(--txt);
     border-top: none;
@@ -259,9 +258,11 @@ html, body {
     align-items: center;
     box-shadow: inset 0px 5px 9px var(--txtbg2);
     transition: all 0.1s ease;
+    position: relative;
+    overflow: visible !important;
 }
 
-.tab-bar button:hover {
+.tab-link:hover {
     background-image: repeating-linear-gradient(
         135deg,
         rgba(0, 0, 0, 0.1),
@@ -271,20 +272,69 @@ html, body {
     );
 }
 
-.tab-bar button.active {
+.tab-link.active {
     background-color: var(--txtbg);
     box-shadow: inset -4px -4px 0 var(--txtbg2);
 }
 
-.tab-bar button.active:hover {
+.tab-link.active:hover {
     background-image: none;
 }
 
-.tab-bar button svg {
+.tab-link svg {
     height: 60%;
     width: auto;
     color: var(--txt);
 }
+
+/* The number badge on the top right of the tab */
+.lvl-badge {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background: var(--txtbg);
+    color: var(--txt);
+    font-weight: bold;
+    border: 2px solid var(--txt);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+/* The vertical adjustment circles on the left */
+.lvl-overlay {
+    display: none; 
+    position: absolute;
+    left: -15px;
+    top: 4px;
+    flex-direction: column;
+}
+
+.tab-link.active .lvl-overlay { 
+    display: flex; 
+}
+
+.lvl-circle {
+    width: 18px;
+    height: 18px;
+    background: var(--txtbg);
+    border: 2px solid var(--txt);
+    border-radius: 6px;
+    color: var(--txt);
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+}
+
+.lvl-circle:active { transform: scale(0.9); }
 
 /* Cursor Styles */
 a, button, .tab-link, .map-icon {
